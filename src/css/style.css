@@ -1,103 +1,72 @@
-/* Сброс стилей */
+@font-face {
+    font-family: 'OpenSans'; /* Имя шрифта */
+    src: url('../fonts/OpenSans.ttf') format('woff2'); /* Указываем путь к файлу и его формат */
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: 'OpenSans'; 
     background-color: #f0f9ff;
     color: #000;
     line-height: 1.5;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
-  
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #3AA8F0;
-    color: #fff;
-    z-index: 1000;
-    padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo img {
-    width: 40px;
-    margin-right: 10px;
-  }
-  
-  .nav a {
-    margin-left: 20px;
-    color: #fff;
+}
+
+a {
     text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .nav a:hover {
-    text-decoration: underline;
-  }
-  
-  .main {
-    margin-top: 80px;
-    text-align: center;
-    padding: 100px;
-  }
-  
-  .intro h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .intro p {
-    font-size: 1.2rem;
+}
+
+h1 {
+    font-size: 56px;
+}
+
+h2 {
+    font-size: 40px;
     margin-bottom: 20px;
-  }
-  
-  .portfolio-button {
+    color: #333;
+}
+
+h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+p {
+    font-size: 21px;
+    margin-bottom: 40px;
+}
+
+.main {
+    margin-top: 80px;
+    padding: 100px;
+}
+
+.block-container {
+    text-align: center;
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button {
     background-color: #6BC4FE;
     color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1rem;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 21px;
+    font-weight: bold;
     cursor: pointer;
-  }
-  
-  .portfolio-button:hover {
+
+}
+
+.button:hover {
     background-color: #2196f3;
-  }
-  
-  .social-icons {
-    margin-top: 20px;
-  }
-  
-  .social-icons a {
-    margin: 0 10px;
-    display: inline-block;
-  }
-  
-  .social-icons img {
-    width: 30px;
-    height: 30px;
-  }
-  
+}

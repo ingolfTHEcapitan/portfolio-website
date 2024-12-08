@@ -1,0 +1,40 @@
+.portfolio {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.portfolio-item {
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    gap: 20px;
+}
+
+.portfolio-image {
+    width: 580px;
+    height: 325px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-text {
+    width: 500px;
+    max-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+}
+
+.portfolio-text h2 {
+    margin-bottom: 0px;
+}
+
+.portfolio-text p {
+    margin-bottom: 0px;
+}
+

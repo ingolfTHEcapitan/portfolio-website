@@ -1,0 +1,23 @@
+.links .home-links {
+    flex: 1;
+    text-align: right;
+}
+
+.home-links {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.links h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.links-list a {
+    margin-left: 10px;
+}
+
+.links-list img {
+    width: 50px;
+    height: 50px;
+}

@@ -1,0 +1,50 @@
+.biography-item {
+    display: flex;
+    border-radius: 10px;
+    padding: 20px;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.biography-imgage {
+    width: 400px;
+    height: 490px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.biography-text {
+    max-width: 700px;
+    text-align: left;
+}
+
+.skills-links-container {
+    justify-content: space-around;
+    align-items: flex-start;
+    display: flex;
+    width: 100%;
+    padding: 20px 0;
+
+}
+
+.skills {
+    flex: 1;
+    max-width: 370px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-list span {
+    background-color: #CEE1FE;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 19px;
+    font-weight: 600;
+    color: #333;
+}
