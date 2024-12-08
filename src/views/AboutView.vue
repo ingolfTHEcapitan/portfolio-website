@@ -1,7 +1,7 @@
 <template>
     <main class="main">
         <div class="biography-item">
-            <img class="biography-imgage" src="..\img/gallery/2022/1.png" alt="Ingolf">
+            <img class="biography-imgage" src="https://drive.google.com/uc?export=view&id=1BPPuH7uB7BI304B4C1saeeowFQdQa5hD" alt="Ingolf">
             <div class="biography-text">
                 <h3>Биография</h3>
                 <p> Привет!<br>
