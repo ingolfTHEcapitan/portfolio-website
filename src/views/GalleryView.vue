@@ -3,43 +3,42 @@
         <section class="block-container">
             <h2>2023</h2>
             <div class="gallery-grid">
-                <img src="..\img/gallery/2023/1.png" alt="Art 1">
-                <img src="..\img/gallery/2023/2.png" alt="Art 2">
-                <img src="..\img/gallery/2023/3.png" alt="Art 3">
-                <img src="..\img/gallery/2023/4.png" alt="Art 4">
-                <img src="..\img/gallery/2023/5.png" alt="Art 5">
-                <img src="..\img/gallery/2023/6.png" alt="Art 6">
-                <img src="..\img/gallery/2023/7.png" alt="Art 7">
-                <img src="..\img/gallery/2023/8.png" alt="Art 8">
-                <img src="..\img/gallery/2023/9.png" alt="Art 9">
-                <img src="..\img/gallery/2023/10.png" alt="Art 10">
-                <img src="..\img/gallery/2023/11.png" alt="Art 10">
+                <img v-for="(image, index) in galleryImages.slice(0, 11)" 
+                    :key="index" 
+                    :src="image.image"
+                    alt="Gallery Image" />
             </div>
 
             <h2>2022</h2>
             <div class="gallery-grid">
-                <img src="..\img/gallery/2022/1.png" alt="Art 1">
-                <img src="..\img/gallery/2022/2.png" alt="Art 2">
-                <img src="..\img/gallery/2022/3.png" alt="Art 3">
-                <img src="..\img/gallery/2022/4.png" alt="Art 4">
-                <img src="..\img/gallery/2022/5.png" alt="Art 5">
-                <img src="..\img/gallery/2022/6.png" alt="Art 6">
-                <img src="..\img/gallery/2022/7.png" alt="Art 7">
-                <img src="..\img/gallery/2022/8.png" alt="Art 8">
-                <img src="..\img/gallery/2022/9.png" alt="Art 9">
-                <img src="..\img/gallery/2022/10.png" alt="Art 10">
-                <img src="..\img/gallery/2022/11.png" alt="Art 10">
+                <img v-for="(image, index) in galleryImages.slice(12, 22)" 
+                    :key="index" 
+                    :src="image.image"
+                    alt="Gallery Image" />
             </div>
         </section>
     </main>
 </template>
 
 <script>
-   export default {
-       name: "GalleryView",
-   };
+export default {
+    name: "GalleryView",
+    data() {
+        return {
+            galleryImages: [], // Здесь будут храниться изображения
+        };
+    },
+    async created() {
+        try {
+            const response = await fetch('http://127.0.0.1:3000/gallery-images');
+            this.galleryImages = await response.json(); // Сохраняем данные в `galleryImages`
+        } catch (error) {
+            console.error('Error loading gallery images:', error);
+        }
+    },
+};
 </script>
 
 <style scoped>
-    @import url("../css/gallery.css");
+@import url("../css/gallery.css");
 </style>

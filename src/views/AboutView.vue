@@ -1,7 +1,7 @@
 <template>
     <main class="main">
         <div class="biography-item">
-            <img class="biography-imgage" src="https://drive.google.com/uc?export=view&id=1BPPuH7uB7BI304B4C1saeeowFQdQa5hD" alt="Ingolf">
+            <img class="biography-imgage" v-if="image" :src="image.image" alt="Ingolf" />
             <div class="biography-text">
                 <h3>Биография</h3>
                 <p> Привет!<br>
@@ -55,7 +55,27 @@
 
 <script>
     export default {
-        name: "AboutView"
+        name: "AboutView",
+        data() {
+            return {
+                image: null, // Хранит только 12-е изображение
+            };
+        },
+        async created() {
+            try {
+                const response = await fetch('http://127.0.0.1:3000/gallery-images');
+                const images = await response.json();
+
+                // Проверяем, есть ли 12-е изображение, и сохраняем его
+                if (images.length >= 12) {
+                    this.image = images[11]; // Индекс 11 = 12-й элемент
+                } else {
+                    console.warn('12-е изображение отсутствует в данных API.');
+                }
+            } catch (error) {
+                console.error('Error fetching the 12th image:', error);
+            }
+        },
     };
 </script>
 

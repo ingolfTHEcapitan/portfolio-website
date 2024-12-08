@@ -6,8 +6,9 @@
                 <div class="portfolio-text">
                     <h2>Галерея</h2>
                     <p>В данном разделе представлены мои самые лучшие работы в digital за 2022-2023 год<br>
-                        Для ознакомления со всеми моими работами как в digital, так и в traditional  можно перейти по ссылкам в разделе “Обо мне”.<br></p>
-                        <router-link to="/gallery" class="button">Перейти</router-link>
+                        Для ознакомления со всеми моими работами как в digital, так и в traditional можно перейти по
+                        ссылкам в разделе “Обо мне”.<br></p>
+                    <router-link to="/gallery" class="button">Перейти</router-link>
                 </div>
             </div>
             <div class="portfolio-item">
@@ -33,11 +34,11 @@
 </template>
 
 <script>
-   export default {
-       name: "PortfolioView",
-   };
+    export default {
+        name: "PortfolioView",
+    };
 </script>
 
 <style scoped>
-   @import url("../css/portfolio.css");
+@import url("../css/portfolio.css");
 </style>
