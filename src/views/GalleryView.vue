@@ -1,27 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Галлерея</title>
-    <link rel="stylesheet" href="..\css\style.css">
-    <link rel="stylesheet" href="..\css\header.css">
-    <link rel="stylesheet" href="..\css\gallery.css">
-</head>
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <img src="..\img\logo.png" alt="Логотип">
-                <h1>Ingolf</h1>
-            </div>
-            <nav class="nav">
-                <a href="index.html">Главная</a>
-                <a href="portfolio.html">Портфолио</a>
-                <a href="biography.html">Обо мне</a>
-            </nav>
-        </div>
-    </header>
+<template>
     <main class="main">
         <section class="block-container">
             <h2>2023</h2>
@@ -55,6 +32,14 @@
             </div>
         </section>
     </main>
-</body>
-</html>
-    
+</template>
+
+<script>
+   export default {
+       name: "GalleryView",
+   };
+</script>
+
+<style scoped>
+    @import url("../css/gallery.css");
+</style>

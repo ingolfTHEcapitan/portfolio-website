@@ -1,28 +1,5 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Игры</title>
-    <link rel="stylesheet" href="..\css\style.css">
-    <link rel="stylesheet" href="..\css\header.css">
-    <link rel="stylesheet" href="..\css\portfolio.css">
-</head>
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <img src="..\img\logo.png" alt="Логотип">
-                <h1>Ingolf</h1>
-            </div>
-            <nav class="nav">
-                <a href="index.html">Главная</a>
-                <a href="portfolio.html">Портфолио</a>
-                <a href="biography.html">Обо мне</a>
-            </nav>
-        </div>
-    </header>
-    <main class="main">
+<template>
+     <main class="main">
         <section class="portfolio">
             <div class="portfolio-item">
                 <img src="..\img/covers/sanake-game.png" alt="Snake Game" class="portfolio-image">
@@ -54,5 +31,14 @@
             </div>
         </section>
     </main>
-</body>
-</html>
+</template>
+
+<script>
+   export default {
+       name: "GamesView"
+   };
+</script>
+
+<style scoped>
+   @import url("../css/portfolio.css");
+</style>

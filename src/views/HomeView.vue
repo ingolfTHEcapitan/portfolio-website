@@ -1,32 +1,9 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
-    <link rel="stylesheet" href="..\css\style.css">
-    <link rel="stylesheet" href="..\css\header.css">
-    <link rel="stylesheet" href="..\css\links.css">
-</head>
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <img src="..\img\logo.png" alt="Логотип">
-                <h1>Ingolf</h1>
-            </div>
-            <nav class="nav">
-                <a href="index.html">Главная</a>
-                <a href="portfolio.html">Портфолио</a>
-                <a href="biography.html">Обо мне</a>
-            </nav>
-        </div>
-    </header>
+<template>
     <main class="main">
         <section class="home-container">
             <h2 class="display">Привет, я Ингольф</h2>
             <p>Digital и Traditional художник, а так же разработчик игр на Unity</p>
-            <a href="portfolio.html" class="button">Портфолио</a>
+            <router-link to="/portfolio" class="button">Портфолио</router-link>
             <div class="home-links links">
                 <div class="links-list">
                     <a href="https://derpibooru.org/search?q=artist%3Aingolf+arts" 
@@ -43,5 +20,14 @@
             </div>
         </section>
     </main>
-</body>
-</html>
+</template>
+
+<script>
+    export default {
+        name: 'HomeView',
+    }
+</script>
+
+<style scoped>
+   @import url("../css/links.css");
+</style>

@@ -1,28 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Обо мне</title>
-    <link rel="stylesheet" href="..\css\style.css">
-    <link rel="stylesheet" href="..\css\header.css">
-    <link rel="stylesheet" href="..\css\biography.css">
-    <link rel="stylesheet" href="..\css\links.css">
-</head>
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <img src="..\img\logo.png" alt="Логотип">
-                <h1>Ingolf</h1>
-            </div>
-            <nav class="nav">
-                <a href="index.html">Главная</a>
-                <a href="portfolio.html">Портфолио</a>
-                <a href="biography.html">Обо мне</a>
-            </nav>
-        </div>
-    </header>
+<template>
     <main class="main">
         <div class="biography-item">
             <img class="biography-imgage" src="..\img/gallery/2022/1.png" alt="Ingolf">
@@ -75,5 +51,15 @@
             </div>
         </div>
     </main>
-</body>
-</html>
+</template>
+
+<script>
+    export default {
+        name: "AboutView"
+    };
+</script>
+
+<style scoped>
+    @import url("../css/biography.css");
+    @import url("../css/links.css");
+</style>

@@ -1,28 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио</title>
-    <link rel="stylesheet" href="..\css\style.css">
-    <link rel="stylesheet" href="..\css\header.css">
-    <link rel="stylesheet" href="..\css\portfolio.css">
-
-</head>
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <img src="..\img\logo.png" alt="Логотип">
-                <h1>Ingolf</h1>
-            </div>
-            <nav class="nav">
-                <a href="index.html">Главная</a>
-                <a href="portfolio.html">Портфолио</a>
-                <a href="biography.html">Обо мне</a>
-            </nav>
-        </div>
-    </header>
+<template>
     <main class="main">
         <section class="portfolio">
             <div class="portfolio-item">
@@ -31,7 +7,7 @@
                     <h2>Галерея</h2>
                     <p>В данном разделе представлены мои самые лучшие работы в digital за 2022-2023 год<br>
                         Для ознакомления со всеми моими работами как в digital, так и в traditional  можно перейти по ссылкам в разделе “Обо мне”.<br></p>
-                    <a href="gallery.html" class="button">Перейти</a>
+                        <router-link to="/gallery" class="button">Перейти</router-link>
                 </div>
             </div>
             <div class="portfolio-item">
@@ -40,7 +16,7 @@
                     <h2>Игры</h2>
                     <p>В данном разделе представлены мои игры на Unity.<br>
                         В каждую игру можно поиграть перейдя по ссылке</p>
-                    <a href="games.html" class="button">Перейти</a>
+                    <router-link to="games" class="button">Перейти</router-link>
                 </div>
             </div>
             <div class="portfolio-item">
@@ -49,10 +25,19 @@
                     <h2>Спидпейнты</h2>
                     <p>В данном разделе представлены ускоренные видеозаписи моего процесса рисования.<br>
                         У каждого спидпеинта есть ссылка для лучшего ознакомления с итоговым артом.</p>
-                    <a href="speedpaints.html" class="button">Перейти</a>
+                    <router-link to="speedpaints" class="button">Перейти</router-link>
                 </div>
             </div>
         </section>
     </main>
-</body>
-</html>
+</template>
+
+<script>
+   export default {
+       name: "PortfolioView",
+   };
+</script>
+
+<style scoped>
+   @import url("../css/portfolio.css");
+</style>
